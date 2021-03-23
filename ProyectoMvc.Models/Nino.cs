@@ -33,5 +33,7 @@ namespace ProyectoMvc.Models
 
         public string Horario { get; set; }
 
+        public string Imagen { get; set; }
+
     }
 }

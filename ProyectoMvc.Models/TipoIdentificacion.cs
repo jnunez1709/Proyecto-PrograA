@@ -8,17 +8,13 @@ namespace ProyectoMvc.Models
 {
     public class TipoIdentificacion
     {
-        public class Encargado
-        {
+
             [Key]
             public int Id { get; set; }
 
-            [DisplayName("Descripcion")]
+            [DisplayName("Nombre")]
             [Required(ErrorMessage = "Este campo es requerido.")]
-            [MaxLength(20, ErrorMessage = "Máximo 20 caracteres.")]
             public string Descripcion { get; set; }
 
-
-        }
     }
 }
