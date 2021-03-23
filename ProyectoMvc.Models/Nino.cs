@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace ProyectoMvc.Models
@@ -32,6 +33,20 @@ namespace ProyectoMvc.Models
         [DisplayName("Horario")]
 
         public string Horario { get; set; }
+
+<<<<<<< HEAD
+        [Required]
+        [DisplayName("Encargado")]
+        public int EncargoId { get; set; }
+
+        [ForeignKey("EncargoId")]
+        [DisplayName("Encargado")]
+        public Encargado Encargado { get; set; }
+
+
+=======
+        public string Imagen { get; set; }
+>>>>>>> ef60c4bc8d02f1c89b74724fef569570915b8dc1
 
     }
 }
