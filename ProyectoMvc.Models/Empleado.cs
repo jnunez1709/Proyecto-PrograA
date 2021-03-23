@@ -12,13 +12,22 @@ namespace ProyectoMvc.Models
         [Key]
         public int Id { get; set; }
 
+        [DisplayName("Tipo Identificación")]
+        [Required(ErrorMessage = "Este campo es requerido.")]
+        public int TipoIdentificacionId { get; set; }
+
+        [ForeignKey("TipoIdentificacionId")]
+        [DisplayName("Tipo Identificación")]
+        public TipoIdentificacion TipoIdentificacion { get; set; }
+
+
+
         [DisplayName("Identificación")]
         [Required(ErrorMessage = "Este campo es requerido.")]
         [MaxLength(20, ErrorMessage = "Máximo 20 caracteres.")]
         public string Identificacion { get; set; }
         public int IdentificacionId { get; set; }
 
-        [ForeignKey("IdentificacionId")]
 
         [Required]
         [DisplayName("Nombre")]
@@ -45,6 +54,17 @@ namespace ProyectoMvc.Models
 
         public int Horaslaborales { get; set; }
 
+        public string Imagen { get; set; }
+
+        [NotMapped]
+        public string NombreEmpleado
+        {
+            get
+            {
+                return
+                    string.Concat(Nombre, " ", Apellidos);
+            }
+        }
 
     }
 }
