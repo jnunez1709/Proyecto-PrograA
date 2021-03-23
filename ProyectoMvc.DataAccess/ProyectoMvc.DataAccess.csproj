@@ -24,8 +24,4 @@
     <ProjectReference Include="..\ProyectoMvc.Models\ProyectoMvc.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Repositorio\IRepositorio\" />
-  </ItemGroup>
-
 </Project>
