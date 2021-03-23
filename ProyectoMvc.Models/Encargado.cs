@@ -10,10 +10,12 @@ namespace ProyectoMvc.Models
         [Key]
         public int Id { get; set; }
 
+        [DisplayName("Tipo Identificación")]
+        [Required(ErrorMessage = "Este campo es requerido.")]
         public int TipoIdentificacionId { get; set; }
 
         [ForeignKey("TipoIdentificacionId")]
-        [DisplayName("Tipo de identificacion")]
+        [DisplayName("Tipo Identificación")]
         public TipoIdentificacion TipoIdentificacion { get; set; }
 
         [DisplayName("Identificación")]
@@ -51,7 +53,7 @@ namespace ProyectoMvc.Models
         [DisplayFormat(DataFormatString = "{0:MM/dd/yyyy}")]
         public DateTime FechaNacimiento { get; set; }
 
-
+        public string Imagen { get; set; }
 
     }
 }
