@@ -12,6 +12,10 @@ namespace ProyectoMvc.Models
         [Key]
         public int Id { get; set; }
 
+        [ForeignKey("TipoIdentificacionId")]
+        [DisplayName("Tipo de identificacion")]
+        public TipoIdentificacion TipoIdentificacion { get; set; }
+
         [DisplayName("Identificación")]
         [Required(ErrorMessage = "Este campo es requerido.")]
         [MaxLength(20, ErrorMessage = "Máximo 20 caracteres.")]
