@@ -6,7 +6,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Repositorios\IRepositorio\" />
+    <Compile Remove="Repositorios\**" />
+    <EmbeddedResource Remove="Repositorios\**" />
+    <None Remove="Repositorios\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,6 +22,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ProyectoMvc.Models\ProyectoMvc.Models.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Repositorio\IRepositorio\" />
   </ItemGroup>
 
 </Project>
