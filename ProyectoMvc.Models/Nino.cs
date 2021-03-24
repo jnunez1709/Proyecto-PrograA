@@ -43,5 +43,15 @@ namespace ProyectoMvc.Models
         [ForeignKey("EncargoId")]
         [DisplayName("Encargado")]
         public Encargado Encargado { get; set; }
+
+        [NotMapped]
+        public string NombreEncargado
+        {
+            get
+            {
+                return
+                    string.Concat(Nombre, " ", Apellidos);
+            }
+        }
     }
 }
